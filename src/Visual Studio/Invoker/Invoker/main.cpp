@@ -570,7 +570,7 @@ int main(int argc, char** argv) {
 		do {
 			Output("############################################################################");
 			Output("#                                                                          #");
-			Output("#                             Invoker v3.4.5                               #");
+			Output("#                             Invoker v3.4.7                               #");
 			Output("#                                     by Ivan Sincek                       #");
 			Output("#                                                                          #");
 			Output("# Penetration testing utility.                                             #");

@@ -36,16 +36,16 @@ int StrToInt(BSTR str) {
 }
 
 std::string StrToLower(std::string str) {
-	int length = str.length();
-	for (int i = 0; i < length; i++) {
+	size_t length = str.length();
+	for (size_t i = 0; i < length; i++) {
 		str[i] = tolower(str[i]);
 	}
 	return str;
 }
 
 std::string StrToUpper(std::string str) {
-	int length = str.length();
-	for (int i = 0; i < length; i++) {
+	size_t length = str.length();
+	for (size_t i = 0; i < length; i++) {
 		str[i] = toupper(str[i]);
 	}
 	return str;
@@ -75,7 +75,7 @@ bool IsPositiveNumber(std::string str) {
 }
 
 std::string StrStripFirstFront(std::string str, std::string delim, bool clear) {
-	std::size_t pos = str.find(delim);
+	size_t pos = str.find(delim);
 	if (pos != std::string::npos) {
 		str.erase(0, pos + delim.length());
 	}
@@ -86,7 +86,7 @@ std::string StrStripFirstFront(std::string str, std::string delim, bool clear) {
 }
 
 std::string StrStripFirstBack(std::string str, std::string delim, bool clear) {
-	std::size_t pos = str.find(delim);
+	size_t pos = str.find(delim);
 	if (pos != std::string::npos) {
 		str.erase(pos);
 	}
@@ -1180,7 +1180,7 @@ std::string GetUnquotedServiceName() {
 				else {
 					LPENUM_SERVICE_STATUSA services = buffer;
 					bool exists = false;
-					for (unsigned int i = 0; i < count; i++) {
+					for (DWORD i = 0; i < count; i++) {
 						SC_HANDLE hService = OpenServiceA(hManager, services->lpServiceName, SERVICE_QUERY_CONFIG);
 						if (hService != NULL) {
 							if (QueryServiceConfig(hService, NULL, 0, &size) == 0) {
@@ -1215,7 +1215,7 @@ std::string GetUnquotedServiceName() {
 						else {
 							services = buffer;
 							exists = false;
-							for (unsigned int i = 0; i < count; i++) {
+							for (DWORD i = 0; i < count; i++) {
 								if (services->lpServiceName == str) {
 									exists = true;
 									name = services->lpServiceName;
